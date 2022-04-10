@@ -59,9 +59,15 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
+  -- Python Plugins PEP-8
+  use { 'vim-scripts/indentpython.vim' }
+  
+  -- Github Copilot plugins
+  use "github/copilot.vim"  -- Github copilot plugin
+  
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  use "dracula/vim"
+  -- use "altercation/vim-colors-solarized"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -93,6 +99,7 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
